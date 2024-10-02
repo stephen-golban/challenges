@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/main.css" />
+    <script src="app.js" defer></script>
+    <title>Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__nav">
+        <div class="nav__heading">Please select one font</div>
+        <ul class="nav__tabs">
+          <li data-tab-target="#mine" class="nav__tab">my fonts</li>
+          <li data-tab-target="#buy" class="nav__tab active">buy fonts</li>
+        </ul>
+      </div>
+      <div class="container__content">
+        <div id="mine" data-tab-content>
+          <!-- Card wrapper starts here -->
+          <div class="card__wrapper">
+            <!-- left side of the card wrapper -->
+            <input
+              type="radio"
+              name="group"
+              class="card__input"
+              id="montserrat"
+            />
+            <label for="montserrat" class="card --vr">
+              <div class="card__box">
+                <div class="card__boxInner">
+                  <div class="box__innerText">M</div>
+                </div>
+              </div>
+              <div class="card__text">
+                <div class="card__textRadio"></div>
+                Merriweather project is led by Sorkin Type
+              </div>
+            </label>
+
+            <!-- right side of the card wrapper -->
+            <div class="separator">
+              <input
+                type="radio"
+                name="group"
+                class="card__input"
+                id="roboto"
+                checked
+              />
+              <label for="roboto" class="card --hr">
+                <div class="card__box">
+                  <div class="card__boxInner" style="background-color: #ff7fc2">
+                    <div class="box__innerText">R</div>
+                  </div>
+                </div>
+                <div class="card__text">
+                  <div class="card__textRadio"></div>
+                  Roboto doesn't compromise, allowing letters
+                </div>
+              </label>
+
+              <input type="radio" name="group" class="card__input" id="noto" />
+              <label for="noto" class="card --hr">
+                <div class="card__box">
+                  <div class="card__boxInner" style="background-color: #006dfe">
+                    <div class="box__innerText">NS</div>
+                  </div>
+                </div>
+                <div class="card__text">
+                  <div class="card__textRadio"></div>
+                  Noto Sans covers over 30 scripts
+                </div>
+              </label>
+            </div>
+          </div>
+          <!-- Card wrapper ends here -->
+        </div>
+        <div id="buy" data-tab-content class="active">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
+          perferendis quia velit accusamus nam eos at odit quos ratione, quis
+          sequi totam dolor mollitia harum assumenda quasi. Sed, voluptatem
+          magni!
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
