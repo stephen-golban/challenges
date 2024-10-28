@@ -4,10 +4,17 @@ import { getDictionary } from "@/dictionaries";
 import type { ReactNode } from "react";
 import type { Locale } from "@/dictionaries";
 
-export default async function LanguageLayout({
-  children,
-  params: { lang },
-}: Readonly<{ children: ReactNode; params: { lang: Locale } }>) {
+export default async function LanguageLayout(props: Readonly<{ children: ReactNode; params: { lang: Locale } }>) {
+  const params = await props.params;
+
+  const {
+    lang
+  } = params;
+
+  const {
+    children
+  } = props;
+
   const dict = await getDictionary(lang);
 
   const navItems = [
