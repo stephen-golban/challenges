@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Bun venit",
+    "description": "Aceasta este pagina principală"
+  },
+  "about": {
+    "title": "Despre noi",
+    "description": "Aflați mai multe despre compania noastră"
+  },
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre"
+  }
+}
