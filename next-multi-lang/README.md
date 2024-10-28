@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Multi-Language Project
+
+A modern Next.js application with built-in internationalization support, using Next.js 15, React 19, and NextUI components.
+
+## Features
+
+- 🌐 Multi-language support
+- 🎨 NextUI components integration
+- 🌓 Dark/Light theme switching
+- ⚡ Turbopack for faster development
+- 🔄 Auto-updates during development
+- 📱 Responsive design
+
+## Tech Stack
+
+- Next.js 15.0.1
+- React 19.0.0-rc
+- NextUI v2
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Next Themes
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/your-repo/next-multi-lang.git
+cd next-multi-lang
+```
+
+2. Install dependencies: (you can use either npm, yarn, pnpm or bun)
+
+```bash
+bun install
+```
+
+3. Run the development server:
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+next-multi-lang/
+├── src/
+│ ├── app/
+│ │ ├── [lang]/ # Dynamic language routes
+│ │ │ ├── page.tsx # Home page
+│ │ │ ├── about/ # About page
+│ │ │ └── layout.tsx # Language-specific layout
+│ │ └── layout.tsx # Root layout
+│ ├── components/
+│ │ ├── card/ # Card component
+│ │ ├── header/ # Header component
+│ │ └── layout/ # Layout components
+│ ├── dictionaries/ # Translation files
+│ │ ├── en/ # English translations
+│ │ └── ro/ # Romanian translations
+│ ├── providers/ # App providers
+│ └── middleware.ts # Language routing middleware
+├── public/ # Static assets
+└── configuration files # Various config files
+
+## Internationalization
+
+The project supports multiple languages through dictionary files located in `src/dictionaries/`. Currently supported languages:
+
+- English (en)
+- Romanian (ro)
+
+To add a new language:
+
+1. Create a new directory in `src/dictionaries/` with the language code
+2. Copy the translation.json structure from an existing language
+3. Translate the content
+
+## Available Scripts
+
+- `dev` - Runs the development server with Turbopack
+- `build` - Creates a production build
+- `start` - Runs the production server
+- `lint` - Runs ESLint for code quality checks
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [NextUI Documentation](https://nextui.org)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Framer Motion Documentation](https://www.framer.com/motion/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
